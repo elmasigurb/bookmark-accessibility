@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover a new favourite book and join the BOOKMARK Reading Club.">
+    <title>BOOKMARK — Your next favourite read starts here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="BOOKMARK home">BOOK<span>MARK</span></a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#discover">Discover Books</a></li>
+          <li><a href="#details">Book Details</a></li>
+          <li><a href="#reading-club">Reading Club</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">An independent guide for curious readers</p>
+          <h1 id="page-title">BOOKMARK — Your next favourite read starts here</h1>
+          <p class="hero-intro">Stories stay with us. Browse our thoughtfully selected shelf and find the one you’ll carry next.</p>
+          <a class="button-link" href="#discover">Explore the collection</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="book book-one"></span>
+          <span class="book book-two"></span>
+          <span class="book book-three"></span>
+          <span class="spark">✦</span>
+        </div>
+      </section>
+
+      <section class="section discover" id="discover" aria-labelledby="discover-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The BOOKMARK edit</p>
+            <h2 id="discover-heading">Discover Books</h2>
+          </div>
+          <p>Search our shelf by title or author.</p>
+        </div>
+
+        <div class="search-wrap">
+          <label for="search">Search</label>
+          <div class="search-control">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+            <input id="search" name="search" type="search" autocomplete="off" placeholder="Try “The Midnight Library”">
+          </div>
+          <p id="results-count" class="results-count" aria-live="polite" aria-atomic="true">Loading books…</p>
+        </div>
+
+        <div id="book-grid" class="book-grid" aria-label="Book search results"></div>
+        <p id="load-error" class="notice" role="alert" hidden>We couldn’t load the books. Please refresh the page and try again.</p>
+      </section>
+
+      <section class="section details-explainer" id="details" aria-labelledby="details-heading">
+        <div>
+          <p class="eyebrow">Go beyond the cover</p>
+          <h2 id="details-heading">Book Details</h2>
+        </div>
+        <p>Select <strong>View details</strong> on any book to see its genre, publication year and full description in a focused dialog.</p>
+      </section>
+
+      <section class="section club" id="reading-club" aria-labelledby="club-heading">
+        <div class="club-intro">
+          <p class="eyebrow">A chapter shared</p>
+          <h2 id="club-heading">Join the Reading Club</h2>
+          <p>One remarkable book each month, considered together. Join fellow readers for recommendations and thoughtful conversation.</p>
+          <blockquote>“A reader lives a thousand lives before he dies.”</blockquote>
+        </div>
+
+        <form id="club-form" class="club-form" novalidate>
+          <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+
+          <div class="field">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" aria-label="Name" required>
+            <p class="error" id="name-error" hidden>Please enter your name.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-label="Email" required>
+            <p class="error" id="email-error" hidden>Please enter a valid email address.</p>
+          </div>
+
+          <div class="field">
+            <label for="genre">Favourite genre <span aria-hidden="true">*</span></label>
+            <select id="genre" name="genre" aria-label="Favourite genre" required>
+              <option value="">Select a genre</option>
+              <option>Romance</option>
+              <option>Fantasy</option>
+              <option>Thriller</option>
+              <option>Literary Fiction</option>
+              <option>Historical Fiction</option>
+              <option>Other</option>
+            </select>
+            <p class="error" id="genre-error" hidden>Please select your favourite genre.</p>
+          </div>
+
+          <div class="field consent-field">
+            <input id="consent" name="consent" type="checkbox" required>
+            <label for="consent">I agree to receive BOOKMARK Reading Club updates. <span aria-hidden="true">*</span></label>
+            <p class="error" id="consent-error" hidden>You must agree before signing up.</p>
+          </div>
+
+          <button class="primary-button" type="submit">Join the Reading Club</button>
+          <p id="form-success" class="success" aria-live="polite" aria-atomic="true"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark footer-wordmark" href="#top">BOOK<span>MARK</span></a>
+      <p>Books worth lingering over.</p>
+      <p><small>© 2026 BOOKMARK. A demonstration book discovery experience.</small></p>
+    </footer>
+
+    <dialog id="book-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button id="dialog-close" class="close-button" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19M19 5 5 19"></path></svg>
+          <span>Close</span>
+        </button>
+        <div class="dialog-content">
+          <img id="dialog-cover" src="" alt="">
+          <div class="dialog-copy">
+            <p class="eyebrow">From the BOOKMARK shelf</p>
+            <h3 id="dialog-title"></h3>
+            <p id="dialog-author" class="dialog-author"></p>
+            <dl>
+              <div><dt>Genre</dt><dd id="dialog-genre"></dd></div>
+              <div><dt>Published</dt><dd id="dialog-year"></dd></div>
+            </dl>
+            <p id="dialog-description"></p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
