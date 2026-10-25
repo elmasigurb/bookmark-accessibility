@@ -150,6 +150,40 @@ test('interactive controls have visible keyboard focus', async ({ page }) => {
   await expectVisibleKeyboardFocus(name);
 });
 
+for (const activationKey of ['Enter', 'Space']) {
+  test(`Save is independently keyboard operable with ${activationKey}`, async ({ page }) => {
+    const search = page.getByLabel('Search', { exact: true });
+    await expect(search).toBeVisible();
+    await search.fill(title);
+
+    const detailsButton = page.getByRole('button', {
+      name: detailsButtonName,
+      exact: true,
+    });
+    const saveButton = page.getByRole('button', {
+      name: saveButtonName,
+      exact: true,
+    });
+    const cardActions = detailsButton.locator('..');
+
+    await expect(detailsButton).toHaveJSProperty('tagName', 'BUTTON');
+    await expect(saveButton).toHaveJSProperty('tagName', 'BUTTON');
+    await expect(cardActions.locator(':scope > button')).toHaveCount(2);
+
+    await detailsButton.focus();
+    await page.keyboard.press('Tab');
+    await expect(saveButton).toBeFocused();
+
+    await page.keyboard.press(activationKey);
+
+    await expect(saveButton).toHaveAttribute('aria-pressed', 'true');
+    await expect(
+      page.getByRole('button', { name: removeButtonName, exact: true }),
+    ).toBeFocused();
+    await expect(page.locator('dialog[open]')).toHaveCount(0);
+  });
+}
+
 test('dialog traps focus and restores it after Escape and Close', async ({ page }) => {
   const search = page.getByLabel('Search', { exact: true });
   await expect(search).toBeVisible();
