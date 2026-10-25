@@ -1,0 +1,82 @@
+[
+  {
+    "id": "midnight-library",
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "genre": "Fantasy fiction",
+    "year": 2020,
+    "cover": "covers/midnight-library.svg",
+    "shortDescription": "Between life and death lies a library filled with the lives we might have lived.",
+    "detailedDescription": "Nora Seed enters a mysterious library between life and death, where every volume offers the chance to try another version of her life. Guided by an old friend, she explores the paths she did not take and begins to reconsider what makes a life worth living."
+  },
+  {
+    "id": "normal-people",
+    "title": "Normal People",
+    "author": "Sally Rooney",
+    "genre": "Literary fiction",
+    "year": 2018,
+    "cover": "covers/normal-people.svg",
+    "shortDescription": "Two young people circle one another through friendship, love, and changing lives.",
+    "detailedDescription": "Connell and Marianne grow up in the same small Irish town but occupy very different social worlds. Their intense connection follows them from school to university, revealing how love, class, silence, and self-understanding can draw two people together and push them apart."
+  },
+  {
+    "id": "seven-husbands",
+    "title": "The Seven Husbands of Evelyn Hugo",
+    "author": "Taylor Jenkins Reid",
+    "genre": "Historical fiction",
+    "year": 2017,
+    "cover": "covers/seven-husbands.svg",
+    "shortDescription": "A reclusive Hollywood icon finally tells the story behind her glamorous, complicated life.",
+    "detailedDescription": "Legendary film star Evelyn Hugo chooses an unknown reporter to write her life story. As she recounts her rise through old Hollywood and the truth behind her seven marriages, a tale of ambition, sacrifice, and a great hidden love begins to connect the two women in unexpected ways."
+  },
+  {
+    "id": "silent-patient",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": "Psychological thriller",
+    "year": 2019,
+    "cover": "covers/silent-patient.svg",
+    "shortDescription": "A painter accused of murder refuses to speak, and one therapist is determined to learn why.",
+    "detailedDescription": "Alicia Berenson appears to have a perfect life until she shoots her husband and never speaks another word. Psychotherapist Theo Faber becomes obsessed with uncovering her motive, but his search for answers draws him deep into a twisting mystery of obsession and deception."
+  },
+  {
+    "id": "little-life",
+    "title": "A Little Life",
+    "author": "Hanya Yanagihara",
+    "genre": "Literary fiction",
+    "year": 2015,
+    "cover": "covers/little-life.svg",
+    "shortDescription": "Four friends build their lives in New York while carrying the weight of love and trauma.",
+    "detailedDescription": "Four college friends move to New York in pursuit of ambitious lives, their relationships deepening and changing across the decades. At the story's centre is the brilliant, guarded Jude, whose painful past tests the limits of friendship, devotion, and endurance."
+  },
+  {
+    "id": "song-of-achilles",
+    "title": "The Song of Achilles",
+    "author": "Madeline Miller",
+    "genre": "Historical fantasy",
+    "year": 2011,
+    "cover": "covers/song-of-achilles.svg",
+    "shortDescription": "An ancient legend becomes an intimate story of love, honour, and fate.",
+    "detailedDescription": "Exiled young prince Patroclus forms an inseparable bond with the golden warrior Achilles. When they join the Greek campaign against Troy, prophecy and war threaten everything they share in this lyrical reimagining of the Iliad."
+  },
+  {
+    "id": "it-ends-with-us",
+    "title": "It Ends with Us",
+    "author": "Colleen Hoover",
+    "genre": "Romance",
+    "year": 2016,
+    "cover": "covers/it-ends-with-us.svg",
+    "shortDescription": "A new love forces one woman to confront the difficult patterns of her past.",
+    "detailedDescription": "Lily Bloom has worked hard to build a new life in Boston when she meets neurosurgeon Ryle Kincaid. Their relationship grows intense, but troubling questions and the return of Lily's first love force her to make difficult choices about love, safety, and the future she wants."
+  },
+  {
+    "id": "housemaid",
+    "title": "The Housemaid",
+    "author": "Freida McFadden",
+    "genre": "Psychological thriller",
+    "year": 2022,
+    "cover": "covers/housemaid.svg",
+    "shortDescription": "A live-in job in a beautiful home hides a dangerous web of secrets.",
+    "detailedDescription": "Millie is desperate for a fresh start when she takes a job with the wealthy Winchester family. Living in a tiny attic room, she soon sees cracks in their perfect facade and discovers that the household's secrets may be more dangerous than her own."
+  }
+]

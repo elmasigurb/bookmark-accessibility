@@ -10,7 +10,7 @@ The research question for this project is:
 
 > **Does providing an AI coding agent with a custom accessibility skill improve the accessibility of the resulting website?**
 
-The project compares two implementations produced from the same prompt, specification, dataset and visual direction. The comparison uses automated tests, manual accessibility testing and an AI browser-agent experiment. The results are interpreted cautiously because the study includes only one implementation in each condition and Project B received iterative fixes after its initial test run.
+The project compares two implementations produced from the same prompt, specification and visual direction. The original generated versions contained the same eight books, but a final audit found that their IDs and textual metadata were not completely identical. This mismatch is treated as a limitation of the original experiment rather than being hidden or retroactively reinterpreted. The final versions were normalized after the experimental results had been recorded. The comparison uses automated tests, manual accessibility testing and an AI browser-agent experiment, and its results are interpreted cautiously because the study includes only one implementation in each condition and Project B received iterative fixes after its initial test run.
 
 ## 2. Project Overview
 
@@ -56,6 +56,12 @@ After the required tests passed, manual testing was carried out with keyboard-on
 
 Finally, an AI browser agent completed the same five-action task against Project B and against a controlled div-based experiment. This comparison examined whether the semantic representation of the Save control affected how directly the agent could identify it.
 
+### Post-experiment dataset normalization
+
+The final submission audit found that Project A and Project B used the same titles, authors and publication years but differed in some IDs, genres and descriptions. Project A's original metadata was therefore adopted as the shared baseline after the original A/B results had been recorded. Project B retained its own cover paths and meaningful `alt` fields, so no accessibility feature was removed. Exact copies of both pre-normalization datasets are preserved in `report/original-datasets/`.
+
+This normalization was a submission correction, not part of the original experiment. The initial and final experimental results were not overwritten or recalculated. The expanded six-test Project B suite was run again against the normalized final version to verify that its tested accessibility behaviour remained intact.
+
 ## 4. Custom Accessibility Skill
 
 The purpose of `.agents/skills/accessibility/SKILL.md` is to make accessibility an active implementation constraint rather than a final checklist. It gives the coding agent concrete rules to apply whenever it creates or changes a user interface.
@@ -96,6 +102,8 @@ Project A passed the visible keyboard-focus test and the axe-core serious/critic
 Project B initially passed one test and failed three. After accessibility fixes, the four required tests passed with no failures. Two further regression tests explicitly confirmed that the details and Save controls were separate native buttons, that Tab moved focus to Save, that both Enter and Space changed its `aria-pressed` state, that focus remained on the renamed Save control and that no dialog opened. The final axe-core result contained zero serious or critical violations.
 
 The additional Project B script used a 640 by 800 pixel viewport, applied 200% page zoom and checked for horizontal document overflow. It then submitted the empty Reading Club form and verified that the Name field received focus, exposed `aria-invalid="true"`, and referenced a visible error through `aria-describedby`. This check passed. It adds useful coverage, but it does not test every possible viewport, zoom configuration or validation state.
+
+All results in the comparison table describe the original experimental sequence before dataset normalization. They remain the recorded results of that experiment. After normalization, the current six-test Project B suite also passed in full; this confirmation shows that the metadata correction did not break the tested interactions, but it does not change the historical results above.
 
 ## 6. Manual Accessibility Testing
 
@@ -154,7 +162,9 @@ Second, the test design covers a defined main journey and selected requirements.
 
 Third, Project B received additional fixes while Project A remained unchanged. This was part of the specified process, but it means the final comparison is not a pure comparison of two first attempts. The final outcome combines the accessibility skill with iterative debugging and regression testing. In fact, the initial automated counts alone do not demonstrate an immediate skill advantage: Project A initially passed two tests, while Project B initially passed one. The clearer evidence is that the skill provided structured guidance for correction and verification, not that it guaranteed a perfect first generation.
 
-Fourth, automated tools have limited coverage. Playwright can verify keyboard sequences and focus states, while axe-core can find many common machine-detectable problems [4], but neither can judge the whole user experience. Official Playwright guidance recommends combining automated checks with manual assessment because many accessibility problems cannot be detected automatically [3]. A passing suite, including zero serious or critical axe violations, therefore does not prove full WCAG 2.2 AA conformance.
+Fourth, the original datasets were not identical even though the experimental specification required a shared dataset. The versions contained the same eight books, but some IDs, genres and descriptions differed. That variation weakens the control of the original A/B comparison because content length and data values can influence rendering and interaction. The final files were normalized only after the results were recorded, and the originals were preserved, so the correction improves the submitted versions without erasing this limitation.
+
+Fifth, automated tools have limited coverage. Playwright can verify keyboard sequences and focus states, while axe-core can find many common machine-detectable problems [4], but neither can judge the whole user experience. Official Playwright guidance recommends combining automated checks with manual assessment because many accessibility problems cannot be detected automatically [3]. A passing suite, including zero serious or critical axe violations, therefore does not prove full WCAG 2.2 AA conformance.
 
 Finally, AI-agent performance and human accessibility overlap but are not equivalent. A browser agent may infer an unnamed control from page structure, as it did in the div experiment, while a human user may not have the same contextual or programmatic support. Conversely, an agent failure would not by itself prove that every human user would fail. The agent experiment is best understood as evidence about the practical value of semantics for machine interpretation, not as a complete accessibility evaluation.
 

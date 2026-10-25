@@ -1,6 +1,6 @@
 # BOOKMARK — Your next favourite read starts here.
 
-BOOKMARK is an academic web development experiment comparing two AI-generated implementations of the same book discovery website. Both versions use the same prompt, accessibility specification, book data and visual direction; the experimental variable is whether the coding agent received a custom accessibility skill.
+BOOKMARK is an academic web development experiment comparing two AI-generated implementations of the same book discovery website. Both versions use the same prompt, accessibility specification and visual direction; the experimental variable is whether the coding agent received a custom accessibility skill. The final versions also use normalized shared book metadata, as explained below.
 
 **Live website:** [https://elmasigurb.github.io/bookmark-accessibility/](https://elmasigurb.github.io/bookmark-accessibility/)
 
@@ -21,6 +21,17 @@ The results provide qualified support for the usefulness of structured accessibi
 | **Project B** | Built with the custom accessibility skill | Debugged iteratively until the required accessibility suite passed |
 
 Both implementations follow the shared [project prompt](./prompt.md), [accessibility specification](./spec.md) and Module 3 visual system. The interface uses deep burgundy (`#44020E`), soft blush pink (`#FFEFF0`) and white (`#FFFFFF`), with DM Serif Display for headings, Inter for body text and a 14-pixel border radius.
+
+### Dataset normalization after the experiment
+
+The original generated implementations contained the same eight books but did not use identical metadata for every ID, genre and description. This mismatch was discovered during the final audit and is a limitation of the original A/B comparison. After the experimental results had been recorded, Project A's original metadata was adopted as the shared baseline for the final versions. Project B retained its implementation-specific cover paths and meaningful alternative-text fields.
+
+The original datasets are preserved unchanged for transparency:
+
+- [Original Project A dataset](./report/original-datasets/a-books-original.json)
+- [Original Project B dataset](./report/original-datasets/b-books-original.json)
+
+This post-experiment normalization did not overwrite or reinterpret the original test results.
 
 ## Main website features
 
@@ -72,6 +83,8 @@ An additional Project B check covers horizontal reflow at 200% zoom and verifies
 Project A passed the visible-focus and serious/critical axe-core checks. Its two failures may partly reflect test assumptions or locator behaviour, so they are not presented as confirmed accessibility defects without further investigation.
 
 Project B's final expanded suite includes two keyboard-save regression tests. Its additional 200% reflow and form-validation check also passed, and the final axe-core scan reported zero serious or critical violations.
+
+The initial and final experimental results above were recorded before dataset normalization and remain unchanged. The six-test Project B suite was run again after normalization to confirm that the final version retained the tested behaviour.
 
 These results describe the tested behaviours. They do **not** establish full WCAG 2.2 conformance.
 
@@ -162,7 +175,8 @@ bookmark-accessibility/
 │   └── accessibility.spec.ts          # Shared Playwright and axe-core suite
 ├── report/
 │   ├── final-report.md
-│   └── testing-results.md
+│   ├── testing-results.md
+│   └── original-datasets/             # Unmodified pre-normalization datasets
 ├── references/
 │   └── module3-style-guide.png
 ├── playwright.config.ts

@@ -3,88 +3,88 @@
     "id": "midnight-library",
     "title": "The Midnight Library",
     "author": "Matt Haig",
-    "genre": "Fantasy Fiction",
+    "genre": "Fantasy fiction",
     "year": 2020,
     "cover": "assets/midnight-library.svg",
     "alt": "Cover of The Midnight Library by Matt Haig",
-    "shortDescription": "Between life and death, a library offers Nora Seed the chance to try the lives she might have lived.",
-    "detailedDescription": "Between life and death there is a library. When Nora Seed finds herself there, each volume gives her a chance to live another version of her life. As she explores what might have been, she must decide what makes a life worth living."
+    "shortDescription": "Between life and death lies a library filled with the lives we might have lived.",
+    "detailedDescription": "Nora Seed enters a mysterious library between life and death, where every volume offers the chance to try another version of her life. Guided by an old friend, she explores the paths she did not take and begins to reconsider what makes a life worth living."
   },
   {
     "id": "normal-people",
     "title": "Normal People",
     "author": "Sally Rooney",
-    "genre": "Literary Fiction",
+    "genre": "Literary fiction",
     "year": 2018,
     "cover": "assets/normal-people.svg",
     "alt": "Cover of Normal People by Sally Rooney",
-    "shortDescription": "Connell and Marianne circle one another through school, university and early adulthood.",
-    "detailedDescription": "Connell and Marianne grow up in the same small Irish town but occupy very different social worlds. Their intense connection follows them from school to university as they test how one person can shape another’s life."
+    "shortDescription": "Two young people circle one another through friendship, love, and changing lives.",
+    "detailedDescription": "Connell and Marianne grow up in the same small Irish town but occupy very different social worlds. Their intense connection follows them from school to university, revealing how love, class, silence, and self-understanding can draw two people together and push them apart."
   },
   {
     "id": "seven-husbands",
     "title": "The Seven Husbands of Evelyn Hugo",
     "author": "Taylor Jenkins Reid",
-    "genre": "Historical Fiction",
+    "genre": "Historical fiction",
     "year": 2017,
     "cover": "assets/seven-husbands.svg",
     "alt": "Cover of The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid",
-    "shortDescription": "A reclusive Hollywood legend chooses an unknown reporter to tell her life story.",
-    "detailedDescription": "Aging film icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. She unexpectedly selects reporter Monique Grant to write it, revealing ambition, friendship and a great forbidden love."
+    "shortDescription": "A reclusive Hollywood icon finally tells the story behind her glamorous, complicated life.",
+    "detailedDescription": "Legendary film star Evelyn Hugo chooses an unknown reporter to write her life story. As she recounts her rise through old Hollywood and the truth behind her seven marriages, a tale of ambition, sacrifice, and a great hidden love begins to connect the two women in unexpected ways."
   },
   {
     "id": "silent-patient",
     "title": "The Silent Patient",
     "author": "Alex Michaelides",
-    "genre": "Thriller",
+    "genre": "Psychological thriller",
     "year": 2019,
     "cover": "assets/silent-patient.svg",
     "alt": "Cover of The Silent Patient by Alex Michaelides",
-    "shortDescription": "A psychotherapist becomes determined to learn why a celebrated painter stopped speaking.",
-    "detailedDescription": "Painter Alicia Berenson shoots her husband and then never speaks another word. Psychotherapist Theo Faber is determined to unravel the mystery of her silence, a pursuit that draws him into his own motivations."
+    "shortDescription": "A painter accused of murder refuses to speak, and one therapist is determined to learn why.",
+    "detailedDescription": "Alicia Berenson appears to have a perfect life until she shoots her husband and never speaks another word. Psychotherapist Theo Faber becomes obsessed with uncovering her motive, but his search for answers draws him deep into a twisting mystery of obsession and deception."
   },
   {
     "id": "little-life",
     "title": "A Little Life",
     "author": "Hanya Yanagihara",
-    "genre": "Literary Fiction",
+    "genre": "Literary fiction",
     "year": 2015,
     "cover": "assets/little-life.svg",
     "alt": "Cover of A Little Life by Hanya Yanagihara",
-    "shortDescription": "Four college friends navigate ambition, friendship and trauma in New York.",
-    "detailedDescription": "Four classmates move to New York in search of success, held together by friendship and their devotion to Jude. Across decades, his hidden past and its lasting pain test the limits of love and endurance."
+    "shortDescription": "Four friends build their lives in New York while carrying the weight of love and trauma.",
+    "detailedDescription": "Four college friends move to New York in pursuit of ambitious lives, their relationships deepening and changing across the decades. At the story's centre is the brilliant, guarded Jude, whose painful past tests the limits of friendship, devotion, and endurance."
   },
   {
-    "id": "song-achilles",
+    "id": "song-of-achilles",
     "title": "The Song of Achilles",
     "author": "Madeline Miller",
-    "genre": "Historical Fantasy",
+    "genre": "Historical fantasy",
     "year": 2011,
     "cover": "assets/song-achilles.svg",
     "alt": "Cover of The Song of Achilles by Madeline Miller",
-    "shortDescription": "Patroclus recounts his bond with Achilles amid the gathering storm of Troy.",
-    "detailedDescription": "Exiled prince Patroclus finds an unlikely companion in the brilliant Achilles. Their bond deepens as they train and travel to Troy, where prophecy, honour and war threaten everything they share."
+    "shortDescription": "An ancient legend becomes an intimate story of love, honour, and fate.",
+    "detailedDescription": "Exiled young prince Patroclus forms an inseparable bond with the golden warrior Achilles. When they join the Greek campaign against Troy, prophecy and war threaten everything they share in this lyrical reimagining of the Iliad."
   },
   {
-    "id": "ends-with-us",
+    "id": "it-ends-with-us",
     "title": "It Ends with Us",
     "author": "Colleen Hoover",
     "genre": "Romance",
     "year": 2016,
     "cover": "assets/ends-with-us.svg",
     "alt": "Cover of It Ends with Us by Colleen Hoover",
-    "shortDescription": "Lily’s new relationship forces her to confront painful patterns from her past.",
-    "detailedDescription": "Lily has worked hard for the life she wants, and meeting neurosurgeon Ryle seems almost too good to be true. Questions about their relationship and the return of her first love compel her to make a difficult choice."
+    "shortDescription": "A new love forces one woman to confront the difficult patterns of her past.",
+    "detailedDescription": "Lily Bloom has worked hard to build a new life in Boston when she meets neurosurgeon Ryle Kincaid. Their relationship grows intense, but troubling questions and the return of Lily's first love force her to make difficult choices about love, safety, and the future she wants."
   },
   {
     "id": "housemaid",
     "title": "The Housemaid",
     "author": "Freida McFadden",
-    "genre": "Thriller",
+    "genre": "Psychological thriller",
     "year": 2022,
     "cover": "assets/housemaid.svg",
     "alt": "Cover of The Housemaid by Freida McFadden",
-    "shortDescription": "A housemaid discovers that the wealthy family employing her is hiding dangerous secrets.",
-    "detailedDescription": "Millie is grateful for a fresh start working in the Winchesters’ beautiful home. But behind its locked doors, unsettling behaviour and dangerous secrets turn the job into a tense game in which appearances cannot be trusted."
+    "shortDescription": "A live-in job in a beautiful home hides a dangerous web of secrets.",
+    "detailedDescription": "Millie is desperate for a fresh start when she takes a job with the wealthy Winchester family. Living in a tiny attic room, she soon sees cracks in their perfect facade and discovers that the household's secrets may be more dangerous than her own."
   }
 ]
